@@ -1,0 +1,16 @@
+@* taskList1 Template File *@
+@(tasks:Seq[(String,Int)])
+
+@main("Task List") {
+    <h2>Task List</h2>
+    <table>
+        @for(t<-tasks){
+            <tr>
+                <td>@t._1</td>
+                <td>@t._2</td>
+            </tr>
+        }
+    </table>
+}
+
+

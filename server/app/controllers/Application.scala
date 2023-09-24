@@ -14,8 +14,12 @@ class Application @Inject()(cc: ControllerComponents) extends AbstractController
   def testing = Action {
     Ok(views.html.testing(SharedMessages.itWorks))
   }
-  def tabular = Action {
-    val stats = scala.collection.immutable.List("team1", "team2", "team3")
-    Ok(views.html.testing(stats))
+  // def tabular = Action {
+  //   val stats = scala.collection.immutable.List("team1", "team2", "team3")
+  //   Ok(views.html.testing(stats))
+  // }
+
+  def product(prodType: String, prodNum: Int) = Action {
+    Ok(s"Product type is $prodType and product number is $prodNum")
   }
 }

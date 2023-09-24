@@ -1,0 +1,18 @@
+@* login1 Template File *@
+@()
+
+@main ("Login") {
+
+    <h2>Login</h2>
+    <form action="/validate1" method="get">
+        Username: <input type="text" name="username"></input>
+        Password: <input type="password" name="password"></input>
+        <input type="submit" ></input>
+    </form>
+    <form action="@routes.TaskList1.validateLoginPost" method="post">
+        Username: <input type="text" name="username"></input>
+        Password: <input type="password" name="password"></input>
+        <input type="submit" ></input>
+    </form>
+
+}

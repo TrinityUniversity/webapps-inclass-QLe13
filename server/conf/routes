@@ -5,7 +5,16 @@
 # Home page
 GET        /                             controllers.Application.index
 GET        /testing                      controllers.Application.testing
+GET        /productArgs                  controllers.Application.product(prodType: String, prodNum: Int)
+GET        /product/:prodType/:prodNum   controllers.Application.product(prodType: String, prodNum: Int)
+GET        /taskList1                    controllers.TaskList1.taskList
 
+
+GET        /validate1                    controllers.TaskList1.validateLoginGet(username: String, password: String)
+GET        /login1                       controllers.TaskList1.login
+
++ nocsrf
+POST       /validatePost1                controllers.TaskList1.validateLoginPost
 
 
 
